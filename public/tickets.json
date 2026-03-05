@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1001,
+    "title": "Login page not working",
+    "description": "The user is completely unable to login to the system even when entering their correct and verified credentials. This issue is blocking access to the entire platform and needs immediate attention from the development team.",
+    "customer": "Rahim Uddin",
+    "priority": "HIGH PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "12/01/2025"
+  },
+  {
+    "id": 1002,
+    "title": "Payment gateway timeout",
+    "description": "The checkout page gets completely stuck and freezes during the payment process, preventing users from completing their transactions. Customers are unable to make any purchases, which is causing significant revenue loss for the business.",
+    "customer": "Karim Hasan",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "18/02/2026"
+  },
+  {
+    "id": 1003,
+    "title": "Dashboard API slow response",
+    "description": "The dashboard API is taking an unusually long time to return the requested data to users on the frontend. This slow response is degrading the overall user experience and making the dashboard practically unusable during peak hours.",
+    "customer": "Sumaiya Akter",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Resolved",
+    "createdAt": "05/03/2025"
+  },
+  {
+    "id": 1004,
+    "title": "Profile update failed",
+    "description": "Users are currently unable to save or update any of their personal profile information through the settings page. Every attempt to submit profile changes results in a failure error, leaving user data outdated and incorrect.",
+    "customer": "Nusrat Jahan",
+    "priority": "HIGH PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "09/04/2026"
+  },
+  {
+    "id": 1005,
+    "title": "Email verification bug",
+    "description": "The email verification link that is sent to newly registered users is not successfully activating their account upon clicking. Users are stuck in an unverified state and cannot access any features that require a verified account.",
+    "customer": "Tanvir Ahmed",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Open",
+    "createdAt": "14/05/2025"
+  },
+  {
+    "id": 1006,
+    "title": "404 error on blog page",
+    "description": "Visiting the blog section of the website consistently returns a 404 not found error regardless of which blog post is accessed. This issue appears to be affecting all blog URLs and may be related to a recent deployment change.",
+    "customer": "Jannatul Ferdous",
+    "priority": "LOW PRIORITY",
+    "status": "Resolved",
+    "createdAt": "20/06/2026"
+  },
+  {
+    "id": 1007,
+    "title": "Search filter not working",
+    "description": "Applying a category filter on the search page does not update the displayed results in any way for the user. The filter appears to be selected visually but has no functional impact on the search results being shown.",
+    "customer": "Shakil Khan",
+    "priority": "HIGH PRIORITY",
+    "status": "In-Progress",
+    "createdAt": "11/07/2025"
+  },
+  {
+    "id": 1008,
+    "title": "Password reset delay",
+    "description": "The password reset email is taking an unusually and unacceptably long time to arrive in the user's inbox after requesting. In some cases the email never arrives at all, leaving users completely locked out of their accounts permanently.",
+    "customer": "Mithila Roy",
+    "priority": "LOW PRIORITY",
+    "status": "Open",
+    "createdAt": "03/08/2026"
+  },
+  {
+    "id": 1009,
+    "title": "Mobile UI alignment issue",
+    "description": "The navigation bar appears visually misaligned and broken when the application is viewed on small mobile devices. This layout issue is affecting the overall usability of the platform on mobile and needs to be fixed with responsive design corrections.",
+    "customer": "Arif Hossain",
+    "priority": "MEDIUM PRIORITY",
+    "status": "Resolved",
+    "createdAt": "22/09/2025"
+  },
+  {
+    "id": 1010,
+    "title": "Data export CSV corrupted",
+    "description": "The CSV file that is generated when users attempt to export their data contains invalid and completely unreadable characters throughout the file. This corruption makes the exported data unusable and prevents users from performing any offline analysis of their information.",
+    "customer": "Sadia Islam",
+    "priority": "HIGH PRIORITY",
+    "status": "Open",
+    "createdAt": "15/10/2026"
+  }
+]

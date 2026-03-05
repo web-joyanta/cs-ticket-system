@@ -4,7 +4,7 @@ import rightVector from "../../assets/vector2.png";
 const DashboardCards = () => {
     return (
         <div className="bg-gray-100">
-            <div className="container mx-auto px-4 py-20">
+            <div className="container mx-auto px-4 py-10 md:py-20">
                 <div className="flex flex-col md:flex-row gap-6">
 
                     {/* In-Progress Card */}

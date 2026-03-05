@@ -1,10 +1,10 @@
 import { AiOutlineCalendar } from "react-icons/ai";
 import { GoDotFill } from "react-icons/go";
 
-const TicketCard = ({ ticket }) => {
+const TicketCard = ({ ticket, handleSelectedTask }) => {
     const { id, title, description, customer, priority, status, createdAt } = ticket;
     return (
-        <div className="card bg-base-100 shadow-md p-4">
+        <div onClick={() => handleSelectedTask(ticket)} className="card bg-base-100 cursor-pointer shadow-md p-4">
             {/* Title + Status */}
             <div className="flex justify-between items-start">
                 <h3 className="font-semibold text-sm">

@@ -1,6 +1,6 @@
 import Status from "../TicketCard/Status/Status";
 
-const TaskStatus = ({ taskTickets, handleTaskComplete }) => {
+const TaskStatus = ({ taskTickets, handleTaskComplete, taskResolved }) => {
     return (
         <div className="order-1 lg:order-2 lg:col-span-3 space-y-6">
             <h3 className="font-semibold mb-5">Task Status</h3>
@@ -11,16 +11,10 @@ const TaskStatus = ({ taskTickets, handleTaskComplete }) => {
 
             <div>
                 <h3 className="font-semibold mb-3">Resolved Task</h3>
-                {/* <p className="text-sm">
-                    No resolved tasks yet.
-                </p> */}
-                {/* card */}
-                <div className="card bg-base-100 shadow-md p-4">
-                    <p className="text-sm mb-3">Payment Failed - Card Declined</p>
-                    <button className="btn text-white bg-[#02A53B] btn-sm w-full">
-                        Complete
-                    </button>
-                </div>
+                {/* resolved task */}
+                {
+                    taskResolved.length > 0 ? taskResolved.map(ticket => <div key={ticket.id} className="bg-[#E0E7FF] rounded-lg shadow-sm p-4 mb-6">{ticket.title}</div>) : <p className="text-sm text-gray-500">No resolved tasks yet.</p>
+                }
             </div>
         </div>
     );

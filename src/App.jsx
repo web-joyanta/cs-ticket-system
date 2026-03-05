@@ -35,7 +35,7 @@ function App() {
       <Navbar />
       <DashboardCards taskTickets={taskTickets} taskResolved={taskResolved} />
       <Suspense fallback={<span className="min-h-screen flex mx-auto items-center loading loading-spinner loading-xl"></span>}>
-        <TicketList ticketsPromise={ticketsPromise} handleSelectedTask={handleSelectedTask} taskTickets={taskTickets} handleTaskComplete={handleTaskComplete} />
+        <TicketList ticketsPromise={ticketsPromise} handleSelectedTask={handleSelectedTask} taskTickets={taskTickets} handleTaskComplete={handleTaskComplete} taskResolved={taskResolved} />
       </Suspense>
       {/* toast container */}
       <ToastContainer />

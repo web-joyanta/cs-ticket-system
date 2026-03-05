@@ -1,12 +1,12 @@
 import Status from "../TicketCard/Status/Status";
 
-const TaskStatus = ({ taskTickets }) => {
+const TaskStatus = ({ taskTickets, handleTaskComplete }) => {
     return (
         <div className="order-1 lg:order-2 lg:col-span-3 space-y-6">
             <h3 className="font-semibold mb-5">Task Status</h3>
             {/* Task status card */}
             {
-                taskTickets.length > 0 ? taskTickets.map(ticket => <Status key={ticket.id} status={ticket} />) : <p className="text-sm text-gray-500">Select a ticket to add to Task Status</p>
+                taskTickets.length > 0 ? taskTickets.map(ticket => <Status handleTaskComplete={handleTaskComplete} key={ticket.id} status={ticket} />) : <p className="text-sm text-gray-500">Select a ticket to add to Task Status</p>
             }
 
             <div>

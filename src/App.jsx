@@ -11,6 +11,7 @@ const fetchTickets = async () => {
 const ticketsPromise = fetchTickets();
 function App() {
   const [taskTickets, setTaskTickets] = useState([]);
+  const [taskResolved, setTaskResolved] = useState([]);
 
   const handleSelectedTask = (ticket) => {
     const alreadyAdded = taskTickets.some(t => t.id === ticket.id);
@@ -20,14 +21,21 @@ function App() {
     };
     toast.success("This ticket is selected!!");
     setTaskTickets([...taskTickets, ticket]);
-  }
+  };
+
+  const handleTaskComplete = (ticket) => {
+    setTaskResolved([...taskResolved, ticket]);
+    const taskCompleted = taskTickets.filter(task => task.id !== ticket.id);
+    setTaskTickets(taskCompleted);
+    toast.success("Ticket resolved completed!!")
+  };
 
   return (
     <>
       <Navbar />
-      <DashboardCards taskTickets={taskTickets} />
+      <DashboardCards taskTickets={taskTickets} taskResolved={taskResolved} />
       <Suspense fallback={<span className="min-h-screen flex mx-auto items-center loading loading-spinner loading-xl"></span>}>
-        <TicketList ticketsPromise={ticketsPromise} handleSelectedTask={handleSelectedTask} taskTickets={taskTickets} />
+        <TicketList ticketsPromise={ticketsPromise} handleSelectedTask={handleSelectedTask} taskTickets={taskTickets} handleTaskComplete={handleTaskComplete} />
       </Suspense>
       {/* toast container */}
       <ToastContainer />

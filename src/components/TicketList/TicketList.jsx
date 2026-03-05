@@ -2,7 +2,7 @@ import { use } from "react";
 import Tickets from "../Tickets/Tickets";
 import TaskStatus from "../TaskStatus/TaskStatus";
 
-const TicketList = ({ ticketsPromise, handleSelectedTask, taskTickets}) => {
+const TicketList = ({ ticketsPromise, handleSelectedTask, taskTickets, handleTaskComplete}) => {
     const ticketsData = use(ticketsPromise);
     return (
         <div className="bg-gray-100">
@@ -10,7 +10,7 @@ const TicketList = ({ ticketsPromise, handleSelectedTask, taskTickets}) => {
                 {/* main grid container */}
                 <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-6">
                     <Tickets handleSelectedTask={handleSelectedTask} ticketsData={ticketsData} />
-                    <TaskStatus taskTickets={taskTickets} />
+                    <TaskStatus taskTickets={taskTickets} handleTaskComplete={handleTaskComplete} />
                 </div>
             </div>
         </div>

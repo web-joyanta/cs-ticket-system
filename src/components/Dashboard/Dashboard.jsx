@@ -1,7 +1,7 @@
 import leftVector from "../../assets/vector1.png";
 import rightVector from "../../assets/vector2.png";
 
-const DashboardCards = ({ taskTickets }) => {
+const DashboardCards = ({ taskTickets, taskResolved }) => {
     return (
         <div className="bg-gray-100">
             <div className="container mx-auto px-4 py-10 md:py-20">
@@ -52,7 +52,7 @@ const DashboardCards = ({ taskTickets }) => {
 
                         {/* Content */}
                         <p className="tracking-wide z-10">Resolved</p>
-                        <h1 className="text-5xl md:text-6xl font-bold mt-2 z-10">0</h1>
+                        <h1 className="text-5xl md:text-6xl font-bold mt-2 z-10">{taskResolved.length}</h1>
                     </div>
 
                 </div>
